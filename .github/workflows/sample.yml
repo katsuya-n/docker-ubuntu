@@ -10,9 +10,12 @@ jobs:
     - name: checkout
       uses: actions/checkout@v3
     
+    - name: build
+      run: docker compose build
+    
     - name: exec docker container exec date
-      run: docker compose exec app date
-      # run: make bash
+      # run: docker compose exec app date
+      run: make bash
     
     - name: exec date
       run: date
