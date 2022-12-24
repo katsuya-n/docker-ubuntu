@@ -11,7 +11,8 @@ jobs:
       uses: actions/checkout@v3
     
     - name: exec docker container bash
-      run: make bash
+      run: docker compose exec app date
+      # run: make bash
     
     - name: exec date
       run: date
